@@ -1,0 +1,123 @@
+=====================================
+CE4703 Assignment 1 Report
+=====================================
+
+Student ID: 17238811
+Author: Dylan O'Halloran
+Start Date: 10/10/2025
+Purpose: Document the following - List Of Modules, List of Functions Per Module, Specification for Each Function, Pseudocode for Each Function
+
+=====================================
+Section 1: Module Structure
+=====================================
+
+Module 1: config.h (Preprocessor Configuration)
+   Purpose: Define macros and constants used throughout the program
+   Files: config.h (header only)
+   Macros:
+      - UNUSED_MARKER: Simple macro for marking unused array elements
+      - MAX(a, b): Macro with parameters to find the maximum of two given values
+      - MIN(a, b): Macro with parameters to find the minimum of two given values
+
+Module 2: utility
+   Purpose: Utility functions for general use
+   Files: utility.h, utility.c
+   Functions:
+      - int generateRandomNumber(int lowerLimit, int upperLimit);
+
+Module 3: array_manipulation
+   Purpose: Functions for modifying array contents
+   Files: array_manipulation.h, array_manipulation.c
+   Functions:
+      - void clearArray(int arr[], int capacity);
+      - void fillArrayRandom(int arr[], int size, int capacity, int min, int max);
+      - void sortArray(int arr[], int capacity);
+      - void randomiseArray(int arr[], int capacity);
+
+Module 4: array_io
+   Purpose: Functions for input/output of arrays
+   Files: array_io.h, array_io.c
+   Functions:
+      - void fillFromKeyboard(int arr[], int capacity);
+      - void printUsed(int arr[], int capacity);
+      - void printAll(int arr[], int capacity);
+
+Module 5: array_statistics
+   Purpose: Statistical analysis functions for arrays
+   Files: array_statistics.h, array_statistics.c
+   Functions:
+      - int getMinimum(int arr[], int capacity);
+      - int getMaximum(int arr[], int capacity);
+      - double getAverage(int arr[], int capacity);
+      - double getMedian(int arr[], int capacity);
+      - double getVariance(int arr[], int capacity);
+      - double getStandardDeviation(int arr[], int capacity);
+      - int countUsedElements(int arr[], int capacity);
+
+Module 6: menu
+   Purpose: Menu functions that demonstrate array operations
+   Files: menu.h, menu.c
+   Functions:
+      - void menuFunction1(void);
+      - void menuFunction2(void);
+      - void menuFunction3(void);
+
+Module 7: main
+   Purpose: Program entry point
+   Files: main.c
+   Functions:
+      - int main(int argc, char *argv[]);
+
+=====================================
+Section 2: Function Specifications
+=====================================
+
+WF1: generateRandomNumber()
+
+Function Prototype:
+   int generateRandomNumber(int lowerLimit, int upperLimit);
+
+Specification:
+   Purpose:
+      Generate a random integer within specified bounds (incl.).
+
+   Input:
+      - lowerLimit: integer, minimum value (incl.)
+      - upperLimit: integer, maximum value (incl.)
+      - Constraint: lowerLimit <= upperLimit
+
+    Output:
+      - Returns: Random integer in range [lowerLimit, upperLimit]
+
+    Behaviour:
+      - Generates uniformly distributed random integer
+      - Seeds random number generator on first call
+      - Both bounds are inclusive
+
+
+=====================================
+Section 3: Pseudocode
+=====================================
+
+WF1: generateRandomNumber(lowerLimit, upperLimit)
+
+First Refinement:
+1. Initialise random number generator if not already seeded
+2. Calculate range of possible values
+3. Generate and return random number in range
+
+Second Refinement:
+1. Initialise random number generator if not already seeded
+   1.1 Use static flag to track seeding status
+   1.2 If not seeded:
+      1.2.1 Call srand() with current time
+      1.2.2 Set flag to true
+
+2. Calculate range of possible values
+   2.1 range = upperLimit - lowerLimit + 1
+
+3. Generate and return random number in range
+   3.1 Generate random value using rand()
+   3.2 Apply modulo to constrain: rand() % range
+   3.3 Shift to correct bounds: lowerLimit + result
+   3.4 Return final value
