@@ -11,6 +11,9 @@
 
 /** 
 * @brief Generates a random integer in the specified range [lowerLimit, upperLimit]
+* @param lowerLimit minimum value incl.
+* @param upperLimit maximum value incl.
+* @return random integer between lowerLimit and upperLimit incl.
 */
 
 int generateRandomNumber(int lowerLimit, int upperLimit) {

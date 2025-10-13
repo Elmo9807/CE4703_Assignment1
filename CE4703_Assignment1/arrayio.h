@@ -1,0 +1,24 @@
+/**
+* @file arrayio.h
+* @brief Array input output functions for filling an array
+* @author Dylan O'Halloran
+* @date 13/10/2025
+*/
+
+#ifndef ARRAYIO_H
+#define ARRAYIO_H
+
+/**
+* @brief Fills an array with values from the keyboard inputs
+* 
+* Reads integer values from input and stores them in the array
+* Input terminates when negative value or array capacity are encountered
+* All remaining elements are marked as unused, if applicable (-1)
+* 
+* @param arr The integer array to fill
+* @param capacity The maximum number of elements the array can hold
+*/
+
+void fillArrayFromKeyboard(int arr[], int capacity);
+
+#endif

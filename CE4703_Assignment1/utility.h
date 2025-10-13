@@ -1,12 +1,12 @@
-#ifndef UTILITY_H
-#define UTILITY_H
-
 /**
 * @file utility.h
 * @brief Utility functions for array analysis program
 * @author Dylan O'Halloran
 * @date 10/10/2025
 */
+
+#ifndef UTILITY_H
+#define UTILITY_H
 
 /**
 * @brief Generate random integer with specified bounds

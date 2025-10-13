@@ -126,10 +126,12 @@
     <Text Include="17238811.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="arrayio.h" />
     <ClInclude Include="config.h" />
     <ClInclude Include="utility.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="arrayio.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="utility.c" />
   </ItemGroup>

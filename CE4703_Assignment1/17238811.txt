@@ -94,7 +94,28 @@ Specification:
       - Seeds random number generator on first call
       - Both bounds are inclusive
 
+WF2: fillFromKeyboard()
 
+Function Prototype:
+   void fillFromKeyboard(int arr[], int capacity);   
+
+Specification:
+   Purpose:
+      - Allow user to input positive integer values into an array in sequence
+
+   Input:
+      - arr: An array of integers to be filled by the function
+      - capacity: Maximum number of elements in the array
+      - Constraint: capacity > 0
+
+    Output:
+      - Returns: Void
+
+    Behaviour:
+      - Prompt user to enter integer values in sequence
+      - Store the value in the next available array position, continue these operations until capacity is met
+      - If a user enters a negative number, terminate input and set unfilled elements of the array to UNUSED_MARKER
+      - Function will disallow user from entering values beyond capacity
 =====================================
 Section 3: Pseudocode
 =====================================
@@ -121,3 +142,22 @@ Second Refinement:
    3.2 Apply modulo to constrain: rand() % range
    3.3 Shift to correct bounds: lowerLimit + result
    3.4 Return final value
+
+WF2: fillFromKeyboard()
+
+First Refinement:
+1. Read in and assign user generated values from the keyboard to the desired structure
+2. Terminate input stream and fill remaining slots with -1
+
+Second Refinement:
+1. Read in the user generated values from the keyboard:
+   1.1 Printf a statement to the user prompting them for keyboard input
+   1.2 Begin a for loop at index 0, terminating at capacity-1, with a step of 1
+   1.3 Using these for loop parameters, read and assign values to index[i]
+   1.4 If value is negative, jump to step 2, else continue
+   1.5 Once i = capacity-1, return to caller
+
+2. Terminate input stream and fill remaining slots with -1
+   2.1 Terminate input and begin new loop
+   2.2 New loop initialised at current i value, iterate until capacity-1, filling array with UNUSED_MARKER value
+   2.3 Once new iterator value = capacity-1, return to caller
