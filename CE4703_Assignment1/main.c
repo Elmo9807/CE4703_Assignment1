@@ -9,6 +9,7 @@
 #include <stdlib.h>
 #include "arrayio.h"
 #include "config.h"
+#include "arraymanipulation.h"
 
 int main(void) {
 	printf("CE4703 Assignment 1 - Array Analysis Program\n");
@@ -17,11 +18,6 @@ int main(void) {
 	printf("ID: Placeholder\n\n");
 
 	printf("Project setup successful.\n");
-
-	int capacity = 20;
-	int testArray[20];
-
-	fillArrayFromKeyboard(testArray, capacity);
 
 	return EXIT_SUCCESS;
 }

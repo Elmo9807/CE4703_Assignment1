@@ -1,6 +1,6 @@
 /**
 * @file arrayio.c
-* @brief Implementation of array keyboard input function
+* @brief Implementation of array input functions
 * @author Dylan O'Halloran
 * @date 10/10/2025
 */
