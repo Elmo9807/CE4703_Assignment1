@@ -19,5 +19,15 @@ int main(void) {
 
 	printf("Project setup successful.\n");
 
+	int myArray[20];
+	int capacity = 20;
+	int size = capacity; 
+	int min = 15;
+	int max = 20000;
+
+	fillArrayRandom(myArray, size, capacity, min, max);
+
+	sortArray(myArray, capacity);
+
 	return EXIT_SUCCESS;
 }

@@ -20,4 +20,8 @@
 
 void fillArrayRandom(int arr[], int size, int capacity, int min, int max);
 
+void clearArray(int arr[], int capacity);
+
+void sortArray(int arr[], int capacity);
+
 #endif
