@@ -89,7 +89,7 @@ void clearArray(int arr[], int capacity)
 /* 1. Receive array and capacity as parameters */
 void sortArray(int arr[], int capacity) 
 {
-	/* 1.1 Initialise used as type int, track used indices in array */
+	/* 1.1 Initialise used as data type int, track used indices in array */
 	int used = 0;
 	
 	/* 2. Iterate through each index from 0 to capacity - 1 */
@@ -119,5 +119,52 @@ void sortArray(int arr[], int capacity)
 				arr[j + 1] = temp;
 			}
 		}
+	}
+}
+
+/**
+* @brief Accepts an array and the array capacity, differentiates between unused and used indices, then applies Fisher-Yates shuffling algorithm to randomise the element positions
+*
+* @param arr the integer array to sort
+* @param capacity the element limit of the array
+*
+*/
+
+/* 1. Receive array and capacity as parameters */
+void randomiseArray(int arr[], int capacity) 
+{
+	/* 1.1 Initialise used as type int and set to 0 */
+	int used = 0;
+
+	/* 2. Iterate through each index from 0 to capacity - 1 */
+
+	/* 2.1 Initialise for loop from index 0, run to capacity - 1, step of 1 */
+	for (int i = 0; i < capacity; i++) {
+
+		/* 2.2 At each index, compare element with UNUSED_MARKER, if element is unused, break, else move to 2.3 */
+		if (arr[i] == UNUSED_MARKER) {
+			break;
+		}
+
+		/* 2.3 Increment used value by 1 */
+		used++;
+	}
+
+	/* 3. Iterate through each index again from used - 1 to 1, using Fisher-Yates shuffling algorithm */
+
+	/*  3.1 Iterate for j from used - 1 down to 1 with step -1 */
+	for (int j = used - 1; j > 0; j--) {
+
+		/* 3.1.1 Generate randomIndex = randomNumberGenerator(0, j), this preserves code reusability by employing our randomisation function */
+		int randomIndex = generateRandomNumber(0, j);
+
+		/* 3.1.2 Swap arr[j] with arr[randomIndex]
+            - temp = arr[j] to preserve our original value
+            - arr[j] = arr[randomIndex]
+            - arr[randomIndex] = temp */
+
+		int temp = arr[j];
+		arr[j] = arr[randomIndex];
+		arr[randomIndex] = temp;
 	}
 }

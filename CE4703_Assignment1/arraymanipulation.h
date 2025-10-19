@@ -15,13 +15,40 @@
 * @param capacity element max of the array
 * @param min Minimum value in random range (inclusive)
 * @param max Maximum value in random range (inclusive)
-* @return Random integer in range [lowerLimit, upperLimit]
+* 
 */
 
 void fillArrayRandom(int arr[], int size, int capacity, int min, int max);
 
+/**
+* @brief Accepts an array and the array capacity, then "clears" all index values by assigning them the UNUSED_MARKER
+*
+* @param arr the integer array to clear
+* @param capacity the element limit of the array
+*
+*/
+
 void clearArray(int arr[], int capacity);
 
+
+/**
+* @brief Accepts an array and the array capacity, differentiates between unused and used indices, then sorts the used indices in ascending order and the unused are sorted to the end of the array
+*
+* @param arr the integer array to sort
+* @param capacity the element limit of the array
+*
+*/
+
 void sortArray(int arr[], int capacity);
+
+/**
+* @brief Accepts an array and the array capacity, differentiates between unused and used indices, then applies Fisher-Yates shuffling algorithm to randomise the element positions
+*
+* @param arr the integer array to sort
+* @param capacity the element limit of the array
+*
+*/
+
+void randomiseArray(int arr[], int capacity);
 
 #endif

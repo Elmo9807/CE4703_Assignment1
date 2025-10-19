@@ -184,7 +184,50 @@ Specification:
       - Iterate through the array up to capacity-1, find number of used elements
       - Iterate through array again up to used-1, using bubble sort algorithm to sort in ascending order
       - When used-1 is met, return to caller
+
+WF6: randomiseArray()
+
+Function Prototype:
+    void randomiseArray(int arr[], int capacity)
+
+Specification:
+    Purpose:
+      - Randomise an array of integers with a given capacity, leaving all unused elements at the end of the array
+
+    Input:
+      - arr: An array of integers to be cleared by the function
+      - capacity: Maximum number of elements in the array
+
+    Output:
+      - Returns: Void
+
+    Behaviour:
+      - Receive an array of integers and its capacity
+      - Iterate through the array up to capacity-1, find number of used elements
+      - Iterate through array again up to used-1, using randomised sorting algorithm to sort
+      - When used-1 is met, return to caller
+
+WF7: printUsed()
+
+Function Prototype:
+    void printUsed(int arr[], int capacity)
+
+Specification:
+    Purpose:
+      - Print each used element of an array
+
+    Input:
+      - arr: An array of integers to be cleared by the function
+      - capacity: Maximum number of elements in the array
+
+    Output:
+      - Returns: Void
       
+     Behaviour:
+       - Receive an array of integers and its capacity
+       - Print opening brace
+       - Iterate through the array up to capacity-1, printing each used element
+       - Print closing brace
 
 =====================================
 Section 3: Pseudocode
@@ -239,7 +282,6 @@ First Refinement:
 2. Terminate random number generation and fill remaining slots with UNUSED_MARKER
 
 Second Refinement:
-
 1. Generate a random number between ranges of min and max
     1.1 Initialise iterator value i
     1.2 Begin a for loop at index 0, i < size AND i < capacity, with a step of 1, when I >= size, we move to step 2
@@ -268,7 +310,6 @@ First Refinement:
 4. When used-1 is met, return to caller
 
 Second Refinement:
-
 1. Receive array and capacity as parameters
     1.1 Initialise used as type int
 
@@ -281,3 +322,56 @@ Second Refinement:
     3.1 Iterate through each index from iterator j = 0 to used - i - 1, step of 1
     3.2 Compare arr[j] with arr[j+1], if arr[j] > arr[j+1] move to step 3.3, else continue
     3.3 Set temporary storage variable = arr[j], arr[j] = arr[j+1] and then arr[j+1] = temp
+
+WF6: randomiseArray()
+
+First Refinement:
+1. Receive array and capacity as parameters
+2. Iterate through each index from 0 to capacity - 1
+3. Iterate through each index again from used -1 to 1
+
+Second Refinement:
+
+1. Receive array and capacity as parameters
+    1.1 Initialise used as type int and set to 0
+
+2. Iterate through each index from 0 to capacity - 1
+    2.1 Initialise for loop from index 0, run to capacity - 1, step of 1
+    2.2 At each index, compare element with UNUSED_MARKER, if element is unused, break, else move to 2.3
+    2.3 Increment used value by 1
+
+3. Iterate through each index again from used - 1 to 1, using Fisher-Yates shuffling algorithm
+    3.1 Iterate for j from used - 1 down to 1 with step -1
+        3.1.1 Generate randomIndex = randomNumberGenerator(0, j)
+        3.1.2 Swap arr[j] with arr[randomIndex]
+            - temp = arr[j]
+            - arr[j] = arr[randomIndex]
+            - arr[randomIndex] = temp
+
+WF7: printUsed()
+
+First Refinement:
+1. Receive array and capacity as parameters
+2. Print opening bracee
+3. Iterate through array and print used elements with commas
+4. Print closing brace
+
+Second Refinement: 
+
+1. Receive array and capacity as parameters
+
+2. Print opening brace
+    2.1 Output the character '{'
+
+3. Iterate through array and print used elements with commas
+    3.1 Initialise first as type int with value of 1
+    3.2 Iterate for i from index 0 to capacity - 1
+    3.3 For each element:
+        2.3.1 If element equals UNUSED_MARKER, break from loop
+        2.3.2 If not first element, print comma and space
+        2.3.3 Print the element value
+        2.3.4 Set flag 'first' to 0
+
+4. Print closing brace
+    4.1 Output character '}'
+    4.2 Output newline character

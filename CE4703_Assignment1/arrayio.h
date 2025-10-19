@@ -17,8 +17,19 @@
 * 
 * @param arr The integer array to fill
 * @param capacity The maximum number of elements the array can hold
+* 
 */
 
-void fillArrayFromKeyboard(int arr[], int capacity);
+void fillFromKeyboard(int arr[], int capacity);
+
+/**
+* @brief Accepts an array and its capacity, then iterates through the elements, printing only used elements
+*
+* @param arr the integer array to fill
+* @param capacity the element limit of the array
+* 
+*/
+
+void printUsed(int arr[], int capacity);
 
 #endif
