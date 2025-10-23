@@ -82,17 +82,17 @@ Specification:
       Generate a random integer within specified bounds (incl.).
 
    Input:
-      - lowerLimit: integer, minimum value (incl.)
-      - upperLimit: integer, maximum value (incl.)
-      - Constraint: lowerLimit <= upperLimit
+        - lowerLimit: integer, minimum value (incl.)
+        - upperLimit: integer, maximum value (incl.)
+        - Constraint: lowerLimit <= upperLimit
 
     Output:
-      - Returns: Random integer in range [lowerLimit, upperLimit]
+        - Returns: Random integer in range [lowerLimit, upperLimit]
 
     Behaviour:
-      - Generates uniformly distributed random integer
-      - Seeds random number generator on first call
-      - Both bounds are inclusive
+        - Generates uniformly distributed random integer
+        - Seeds random number generator on first call
+        - Both bounds are inclusive
 
 WF2: fillFromKeyboard()
 
@@ -101,21 +101,21 @@ Function Prototype:
 
 Specification:
    Purpose:
-      - Allow user to input positive integer values into an array in sequence
+        - Allow user to input positive integer values into an array in sequence
 
    Input:
-      - arr: An array of integers to be filled by the function
-      - capacity: Maximum number of elements in the array
-      - Constraint: capacity > 0
+        - arr: An array of integers to be filled by the function
+        - capacity: Maximum number of elements in the array
+        - Constraint: capacity > 0
 
     Output:
-      - Returns: Void
+        - Returns: Void
 
     Behaviour:
-      - Prompt user to enter integer values in sequence
-      - Store the value in the next available array position, continue these operations until capacity is met
-      - If a user enters a negative number, terminate input and set unfilled elements of the array to UNUSED_MARKER
-      - Function will disallow user from entering values beyond capacity
+        - Prompt user to enter integer values in sequence
+        - Store the value in the next available array position, continue these operations until capacity is met
+        - If a user enters a negative number, terminate input and set unfilled elements of the array to UNUSED_MARKER
+        - Function will disallow user from entering values beyond capacity
 
 WF3: fillArrayRandom()
 
@@ -124,23 +124,23 @@ Function Prototype:
 
 Specification:
     Purpose:
-      - Fill an array of integers of randomised values between range min-max inclusive, to capacity
+        - Fill an array of integers of randomised values between range min-max inclusive, to capacity
 
     Input:
-      - arr: An array of integers to be filled by the function
-      - capacity: Maximum number of elements in the array
-      - min: lowest possible value in the range
-      - max: highest possible value in the range
-      - size: the amount of random numbers to add
-      - Constraints: capacity > 0
+        - arr: An array of integers to be filled by the function
+        - capacity: Maximum number of elements in the array
+        - min: lowest possible value in the range
+        - max: highest possible value in the range
+        - size: the amount of random numbers to add
+        - Constraints: capacity > 0
 
     Output:
-      - Returns: Void
+        - Returns: Void
 
     Behaviour:
-      - Generate random number in range by calling WF1
-      - Store the value in the next available array position until size is met
-      - When size is met, if unfilled elements remain, fill with UNUSED_MARKER
+        - Generate random number in range by calling WF1
+        - Store the value in the next available array position until size is met
+        - When size is met, if unfilled elements remain, fill with UNUSED_MARKER
 
 WF4: clearArray()
 
@@ -149,19 +149,19 @@ Function Prototype:
 
 Specification:
     Purpose:
-      - Clear an array of integers by "removing" all elements, that is to fill the array with the unused value.
+        - Clear an array of integers by "removing" all elements, that is to fill the array with the unused value.
 
     Input:
-      - arr: An array of integers to be cleared by the function
-      - capacity: Maximum number of elements in the array
+        - arr: An array of integers to be cleared by the function
+        - capacity: Maximum number of elements in the array
 
     Output:
-      - Returns: Void
+        - Returns: Void
 
     Behaviour:
-      - Receive an array of integers and its capacity
-      - Iterate through the array, setting each value to the unused marker value
-      - When capacity-1 is met, return to caller
+        - Receive an array of integers and its capacity
+        - Iterate through the array, setting each value to the unused marker value
+        - When capacity-1 is met, return to caller
 
 WF5: sortArray()
 
@@ -170,20 +170,20 @@ Function Prototype:
 
 Specification:
     Purpose:
-      - Sort an array of integers in ascending order, leaving all unused elements at the end of the array
+        - Sort an array of integers in ascending order, leaving all unused elements at the end of the array
 
     Input:
-      - arr: An array of integers to be cleared by the function
-      - capacity: Maximum number of elements in the array
+        - arr: An array of integers to be cleared by the function
+        - capacity: Maximum number of elements in the array
 
     Output:
-      - Returns: Void
+        - Returns: Void
 
     Behaviour:
-      - Receive an array of integers and its capacity
-      - Iterate through the array up to capacity-1, find number of used elements
-      - Iterate through array again up to used-1, using bubble sort algorithm to sort in ascending order
-      - When used-1 is met, return to caller
+        - Receive an array of integers and its capacity
+        - Iterate through the array up to capacity-1, find number of used elements
+        - Iterate through array again up to used-1, using bubble sort algorithm to sort in ascending order
+        - When used-1 is met, return to caller
 
 WF6: randomiseArray()
 
@@ -192,20 +192,20 @@ Function Prototype:
 
 Specification:
     Purpose:
-      - Randomise an array of integers with a given capacity, leaving all unused elements at the end of the array
+        - Randomise an array of integers with a given capacity, leaving all unused elements at the end of the array
 
     Input:
-      - arr: An array of integers to be cleared by the function
-      - capacity: Maximum number of elements in the array
+        - arr: An array of integers to be cleared by the function
+        - capacity: Maximum number of elements in the array
 
     Output:
-      - Returns: Void
+        - Returns: Void
 
     Behaviour:
-      - Receive an array of integers and its capacity
-      - Iterate through the array up to capacity-1, find number of used elements
-      - Iterate through array again up to used-1, using randomised sorting algorithm to sort
-      - When used-1 is met, return to caller
+        - Receive an array of integers and its capacity
+        - Iterate through the array up to capacity-1, find number of used elements
+        - Iterate through array again up to used-1, using randomised sorting algorithm to sort
+        - When used-1 is met, return to caller
 
 WF7: printUsed()
 
@@ -214,20 +214,122 @@ Function Prototype:
 
 Specification:
     Purpose:
-      - Print each used element of an array
+        - Print each used element of an array
 
     Input:
-      - arr: An array of integers to be cleared by the function
-      - capacity: Maximum number of elements in the array
+        - arr: An array of integers to be cleared by the function
+        - capacity: Maximum number of elements in the array
 
     Output:
-      - Returns: Void
+        - Returns: Void
       
-     Behaviour:
-       - Receive an array of integers and its capacity
-       - Print opening brace
-       - Iterate through the array up to capacity-1, printing each used element
-       - Print closing brace
+    Behaviour:
+        - Receive an array of integers and its capacity
+        - Print opening brace
+        - Iterate through the array up to capacity-1, printing each used element
+        - Print closing brace
+
+WF8: printAll()
+
+Function Prototype:
+    void printAll(int arr[], int capacity)
+
+Specification:
+    Purpose:
+        - Print each element of an array
+
+    Input:
+        - arr: An array of integers to be printed by the function
+        - capacity: Maximum number of elements in the array
+
+    Output:
+        - Returns: Void
+
+    Behaviour:
+        - Receive an array of integers and its capacity
+        - Print opening brace
+        - Iterate through the array up to capacity-1, printing each element
+        - Print closing brace
+
+WF10: int getMaximum(int arr[], int capacity);
+
+Function Prototype:
+   int getMaximum(int arr[], int capacity);
+
+Specification:
+   Purpose:
+        - Find and return the maximum value among the used elements in an array
+
+   Input:
+        - arr: An array of integers to be analyzed by the function
+        - capacity: Maximum number of elements in the array
+        - Constraint: capacity > 0, array must contain at least one used element
+
+   Output:
+        - Returns: Integer value representing the maximum used element in the array
+
+   Behaviour:
+        - Receive an array of integers and its capacity
+        - Initialize maximum to the first element in the array
+        - Iterate through the array, comparing each used element with current maximum
+        - Skip UNUSED_MARKER values (since they appear at end of array)
+        - Update maximum value when smaller element is found using MIN macro
+        - When UNUSED_MARKER is encountered or capacity-1 is reached, return maximum value to caller
+
+WF11: double getAverage()
+
+Function Prototype:
+    double getAverage(int arr[], int capcity)
+
+Specification:
+    Purpose:
+        - Find and return the maximum value among the used elements in an array
+
+    Input:
+        - arr: An array of integers to be analyzed by the function
+        - capacity: Maximum number of elements in the array
+        - Constraint: capacity > 0, array must contain at least one used element
+
+    Output:
+        - Returns: Integer value representing the maximum used element in the array
+
+    Behaviour:
+        - Receive an array of integers and its capacity
+        - Initialise maximum to the first element in the array
+        - Iterate through the array, comparing each used element with current maximum
+        - Skip UNUSED_MARKER values (terminate iteration when encountered)
+        - Update maximum value when larger element is found using MAX macro
+        - When UNUSED_MARKER is encountered or capacity is exhausted, return maximum value to caller
+
+WF12: double getMedian()
+
+Function Prototype:
+   double getMedian(int arr[], int capacity);
+
+Specification:
+   Purpose:
+        - Find and return the median value of the used elements in an array
+
+   Input:
+        - arr: An array of integers to be analysed by the function
+        - capacity: Maximum number of elements in the array
+        - Constraint: capacity > 0, array must contain at least one used element
+
+   Output:
+        - Returns: Double value representing the median of used elements
+        - If odd number of elements: returns the middle value
+        - If even number of elements: returns average of two middle values
+        - Returns 0.0 if memory allocation fails
+
+   Behaviour:
+        - Receive an array of integers and its capacity
+        - Count the number of used elements in the array
+        - Dynamically allocate memory for a temporary array
+        - Verify memory allocation succeeded
+        - Sort the temporary array in ascending order using Bubblesort
+        - Calculate median based on whether count is odd or even
+        - Free dynamically allocated memory
+        - Return median value to caller
 
 =====================================
 Section 3: Pseudocode
@@ -352,7 +454,7 @@ WF7: printUsed()
 
 First Refinement:
 1. Receive array and capacity as parameters
-2. Print opening bracee
+2. Print opening brace
 3. Iterate through array and print used elements with commas
 4. Print closing brace
 
@@ -375,3 +477,141 @@ Second Refinement:
 4. Print closing brace
     4.1 Output character '}'
     4.2 Output newline character
+
+WF8: printAll()
+
+First Refinement:
+1. Receive array and its capacity as parameters
+2. Print opening brace
+3. Iterate through array and print each value
+4. Print closing brace
+
+Second Refinement:
+
+1. Receive array and its capacity as parameters
+
+2. Print opening brace:
+    2.1 Output character '{'
+
+3. Iterate through array and print each value
+    3.1 Initialise first with type int with a value of 1
+    3.2 Iterate for i from index 0 to capacity - 1, with a step of 1
+    3.3 For each element
+        3.3.1 If not first element, print comma and space
+        3.3.2 Print element value
+        3.3.3 Set flag 'first' to 0
+
+4. Print closing brace
+    4.1 Output character '}'
+    4.2 Output newline character
+
+WF9: getMinimum()
+
+First Refinement:
+1. Initialise minimum value to first array element
+2. Iterate through array comparing each used element with current minimum
+3. Return the minimum value found
+
+Second Refinement:
+1. Initialise minimum value to first array element
+    1.1 Set minimum = arr[0]
+
+2. Iterate through array comparing each used element with current minimum
+    2.1 Initialise for loop from index 0, run to capacity - 1, step of 1
+    2.2 At each index, check if arr[i] equals UNUSED_MARKER
+    2.3 If arr[i] is UNUSED_MARKER, break from loop (unused elements are at end)
+    2.4 Otherwise, use MIN macro to compare: minimum = MIN(minimum, arr[i])
+    2.5 Continue until break condition or i reaches capacity - 1
+
+3. Return the minimum value found
+    3.1 Return minimum to caller
+
+WF10: getMaximum()
+
+First Refinement:
+1. Initialise maximum value to first array element
+2. Iterate through array comparing each used element with current maximum
+3. Return the maximum value found
+
+Second Refinement:
+1. Initialise maximum value to first array element
+    1.1 Set maximum = arr[0]
+
+2. Iterate through array comparing each used element with current maximum
+    2.1 Initialise for loop from index 0, run to capacity - 1, step of 1
+    2.2 At each index, check if arr[i] equals UNUSED_MARKER
+    2.3 If arr[i] is UNUSED_MARKER, break from loop (unused elements are at end)
+    2.4 Otherwise, use MAX macro to compare: maximum = MAX(maximum, arr[i])
+    2.5 Continue until break condition or i reaches capacity - 1
+
+3. Return the maximum value found
+    3.1 Return maximum to caller
+
+WF11: getAverage()
+
+First Refinement:
+1. Initialise divisor and total to zero
+2. Iterate through array summing used elements and counting them
+3. Calculate and return the average as a double
+
+Second Refinement:
+1. Initialise divisor and total to zero
+    1.1 Set divisor = 0
+    1.2 Set total = 0
+
+2. Iterate through array summing used elements and counting them
+    2.1 Initialise for loop from index 0, run to capacity - 1, step of 1
+    2.2 At each index, check if arr[i] equals UNUSED_MARKER
+    2.3 If arr[i] is UNUSED_MARKER, break from loop (unused elements are at end)
+    2.4 Otherwise, add arr[i] to total: total = total + arr[i]
+    2.5 Increment divisor: divisor = divisor + 1
+    2.6 Continue until break condition or i reaches capacity - 1
+
+3. Calculate and return the average as a double
+    3.1 If divisor equals 0, return 0.0 (avoid division by zero)
+    3.2 Cast total to double and divide by divisor
+    3.3 Return (double)total / divisor to caller
+
+WF12: getMedian()
+
+First Refinement:
+1. Count the number of used elements in the array
+2. Dynamically allocate and populate a temporary sorted array
+3. Calculate the median value
+4. Free allocated memory and return median
+
+Second Refinement:
+1. Count the number of used elements in the array
+    1.1 Initialise used = 0
+    1.2 Initialise for loop from index 0 to capacity - 1, step of 1
+    1.3 At each index, check if arr[i] equal UNUSED_MARKER
+    1.4 If arr[i] is UNUSED_MARKER, break from loop
+    1.5 Otherwise, increment used by 1
+
+2. Dynamically allocate and populate a temporary sorted array
+    2.1 Dynamically allocate memory: tempArr = malloc(used * sizeof(int))
+    2.2 Check if allocation succeeded (tempArr != NULL)
+        2.2.1 If tempArr is NULL, return 0.0
+    2.3 Copy used elements from arr to tempArr
+        2.3.1 Initialise for loop from i = 0 to used - 1, step of 1
+        2.3.2 Set tempArr[i] = arr[i]
+    2.4 Sort tempArr using bubble sort algorithm
+        2.4.1 Initialise outer loop from i = 0 to used - 2, step of 1
+        2.4.2 Initialise inner loop from j = 0 to used - i - 2, step of 1
+        2.4.3 If tempArr[j] > tempArr[j+1], swap:
+            2.4.3.1 temp = tempArr[j]
+            2.4.3.2 tempArr[j] = tempArr[j+1]
+            2.4.3.3 tempArr[j+1] = temp
+
+3. Calculate the median value
+    3.1 Calculate middle index: middle = used / 2
+    3.2 Declare median as double
+    3.3 If used is odd (used % 2 == 1):
+        3.3.1 Return tempArr[middle] as double
+    3.4 If used is even (used % 2 == 0):
+        3.3.1 Calculate average of two middle values
+        3.3.2 median = (tempArr[middle - 1] + tempArr[middle]) / 2.0
+
+4. Free allocated memory and return the median
+    4.1 Call free(tempArr) to release dynamically allocated memory
+    4.2 Return median to caller

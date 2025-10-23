@@ -128,12 +128,14 @@
   <ItemGroup>
     <ClInclude Include="arrayio.h" />
     <ClInclude Include="arraymanipulation.h" />
+    <ClInclude Include="array_statistics.h" />
     <ClInclude Include="config.h" />
     <ClInclude Include="utility.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="arrayio.c" />
     <ClCompile Include="arraymanipulation.c" />
+    <ClCompile Include="array_statistics.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="utility.c" />
   </ItemGroup>
