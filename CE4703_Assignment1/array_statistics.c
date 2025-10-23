@@ -130,6 +130,17 @@ double getAverage(int arr[], int capacity)
 	return (double)total / divisor;
 }
 
+
+/**
+* @brief Accepts an array and its capacity as parameters, calculates the median of the elements in the array, then returns the middle element if it is odd or the average of the middle elements if it is even
+*
+* @param arr the integer array to calculate the average of
+* @param capacity the element limit of the array
+*
+* @return double value with median
+*
+*/
+
 double getMedian(int arr[], int capacity) 
 {
 
