@@ -78,12 +78,41 @@ void printUsed(int arr[], int capacity)
 
 		if (!first)
 			printf(", ");
-		printf("%d", arr[i]);
-		first = 0;
+			printf("%d", arr[i]);
+			first = 0;
 	}
 
 	/* 4. Print closing brace
 	4.1 Output character '}'
 	4.2 Output newline character */
+	printf("}\n");
+}
+
+/* 1. Receive array and its capacity as parameters */
+void printAll(int arr[], int capacity)
+{
+	/* 2. Print opening brace:
+	2.1 Output character '{'*/
+	printf("{");
+
+	/* 3. Iterate through array and print each value
+    3.1 Initialise first with type int with a value of 1 */
+	int first = 1;
+
+	/* 3.2 Iterate for i from index 0 to capacity - 1, with a step of 1 */
+	for (int i = 0; i < capacity; i++) {
+		/* 3.3 For each element
+        3.3.1 If not first element, print comma and space
+        3.3.2 Print element value
+        3.3.3 Set flag 'first' to 0 */
+		if (!first)
+			printf(", ");
+			printf("%d");
+			first = 0;
+	}
+
+	/* 4. Print closing brace
+    4.1 Output character '}'
+    4.2 Output newline character */
 	printf("}\n");
 }

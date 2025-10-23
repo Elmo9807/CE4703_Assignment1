@@ -467,7 +467,7 @@ Second Refinement:
 
 3. Iterate through array and print used elements with commas
     3.1 Initialise first as type int with value of 1
-    3.2 Iterate for i from index 0 to capacity - 1
+    3.2 Iterate for i from index 0 to capacity - 1, with a step of 1
     3.3 For each element:
         2.3.1 If element equals UNUSED_MARKER, break from loop
         2.3.2 If not first element, print comma and space
