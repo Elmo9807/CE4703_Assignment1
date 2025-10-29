@@ -14,11 +14,11 @@
 #include "menu.h"
 #include "arraymanipulation.h"
 
-int main(void) {
+int main(int argc, char *argv[]) {
 	printf("CE4703 Assignment 1 - Array Analysis Program\n");
 	printf("=====================================\n");
 	printf("Student: Dylan O'Halloran\n");
-	printf("ID: Placeholder\n\n");
+	printf("ID: 17238811\n\n");
 
 	int choice;
 

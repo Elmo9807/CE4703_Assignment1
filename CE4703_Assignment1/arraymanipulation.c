@@ -119,6 +119,8 @@ void randomiseArray(int arr[], int capacity)
 {
 	/* 2. Count used elements using countUsedElements() function */
 	/* 2.2 Store result in used variable */
+
+	// call to countUsedElements, following DRY methodology [Don't Repeat Yourself]
 	int used = countUsedElements(arr, capacity);
 
 	/* 3. Randomise used elements using Fisher-Yates shuffling algorithm
@@ -131,6 +133,7 @@ void randomiseArray(int arr[], int capacity)
 
 	for (int j = used - 1; j > 0; j--) {
 
+		// call generateRandomNumber, assign output to randomIndex, DRY methodology
 		int randomIndex = generateRandomNumber(0, j);
 
 		int temp = arr[j];

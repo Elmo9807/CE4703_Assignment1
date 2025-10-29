@@ -1,0 +1,218 @@
+\doxysection{C\+:/\+Users/dylan/source/repos/\+CE4703\+\_\+\+Assignment1/\+CE4703\+\_\+\+Assignment1/array\+\_\+statistics.h File Reference}
+\hypertarget{array__statistics_8h}{}\label{array__statistics_8h}\index{C:/Users/dylan/source/repos/CE4703\_Assignment1/CE4703\_Assignment1/array\_statistics.h@{C:/Users/dylan/source/repos/CE4703\_Assignment1/CE4703\_Assignment1/array\_statistics.h}}
+
+
+Function grouping that outputs statistical analysis of the array elements.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{array__statistics_8h_ae2e88ac8d29dfa37e33dd13553765cac}{count\+Used\+Elements}} (int arr\mbox{[}$\,$\mbox{]}, int capacity)
+\begin{DoxyCompactList}\small\item\em Count and return the number of used elements in an array. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{array__statistics_8h_afc85a4c15ca09d11bba5c74f0c5d1f01}{get\+Minimum}} (int arr\mbox{[}$\,$\mbox{]}, int capacity)
+\begin{DoxyCompactList}\small\item\em Accepts an array and its capacity, then returns the element with the lowest value in the array. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{array__statistics_8h_ae4a13df92d8e1a7503bb91b16de072ae}{get\+Maximum}} (int arr\mbox{[}$\,$\mbox{]}, int capacity)
+\begin{DoxyCompactList}\small\item\em Accepts an array and its capacity, then returns the element with the highest value in the array. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{array__statistics_8h_a29b86644b114d35baca16daacea7f4d1}{get\+Average}} (int arr\mbox{[}$\,$\mbox{]}, int capacity)
+\begin{DoxyCompactList}\small\item\em Accepts an array and its capacity as parameters, calculates the average of the used elements in the array, then returns average as a double. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{array__statistics_8h_a63b87f0f15f9ffe55d187bea17d7696c}{get\+Median}} (int arr\mbox{[}$\,$\mbox{]}, int capacity)
+\begin{DoxyCompactList}\small\item\em Accepts an array and its capacity as parameters, calculates the median of the elements in the array, then returns the middle element if it is odd or the average of the middle elements if it is even. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{array__statistics_8h_a1044c3874ce342def032e271dfdc60d1}{get\+Variance}} (int arr\mbox{[}$\,$\mbox{]}, int capacity)
+\begin{DoxyCompactList}\small\item\em Compute and return the variance of an array of integers. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{array__statistics_8h_a762a4df340d008ff7a9aaa83f1f3aa4c}{get\+Standard\+Deviation}} (int arr\mbox{[}$\,$\mbox{]}, int capacity)
+\begin{DoxyCompactList}\small\item\em Calculate and return the standard deviation of used elements in an array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Function grouping that outputs statistical analysis of the array elements. 
+
+\begin{DoxyAuthor}{Author}
+Dylan OHalloran 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+22/10/2025 
+\end{DoxyDate}
+
+
+\label{doc-func-members}
+\Hypertarget{array__statistics_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{array__statistics_8h_ae2e88ac8d29dfa37e33dd13553765cac}\index{array\_statistics.h@{array\_statistics.h}!countUsedElements@{countUsedElements}}
+\index{countUsedElements@{countUsedElements}!array\_statistics.h@{array\_statistics.h}}
+\doxysubsubsection{\texorpdfstring{countUsedElements()}{countUsedElements()}}
+{\footnotesize\ttfamily \label{array__statistics_8h_ae2e88ac8d29dfa37e33dd13553765cac} 
+int count\+Used\+Elements (\begin{DoxyParamCaption}\item[{int}]{arr}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{capacity}{}\end{DoxyParamCaption})}
+
+
+
+Count and return the number of used elements in an array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & the integer array to analyse \\
+\hline
+{\em capacity} & the element limit of the array\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int the number of used (non-\/\+UNUSED\+\_\+\+MARKER) elements 
+\end{DoxyReturn}
+\Hypertarget{array__statistics_8h_a29b86644b114d35baca16daacea7f4d1}\index{array\_statistics.h@{array\_statistics.h}!getAverage@{getAverage}}
+\index{getAverage@{getAverage}!array\_statistics.h@{array\_statistics.h}}
+\doxysubsubsection{\texorpdfstring{getAverage()}{getAverage()}}
+{\footnotesize\ttfamily \label{array__statistics_8h_a29b86644b114d35baca16daacea7f4d1} 
+double get\+Average (\begin{DoxyParamCaption}\item[{int}]{arr}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{capacity}{}\end{DoxyParamCaption})}
+
+
+
+Accepts an array and its capacity as parameters, calculates the average of the used elements in the array, then returns average as a double. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & the integer array to calculate the average of the elements of the array \\
+\hline
+{\em capacity} & the element limit of the array\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double value with the average of the used elements of the array
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & the integer array to calculate the average of \\
+\hline
+{\em capacity} & the element limit of the array\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double value with the average of the used elements of the array 
+\end{DoxyReturn}
+\Hypertarget{array__statistics_8h_ae4a13df92d8e1a7503bb91b16de072ae}\index{array\_statistics.h@{array\_statistics.h}!getMaximum@{getMaximum}}
+\index{getMaximum@{getMaximum}!array\_statistics.h@{array\_statistics.h}}
+\doxysubsubsection{\texorpdfstring{getMaximum()}{getMaximum()}}
+{\footnotesize\ttfamily \label{array__statistics_8h_ae4a13df92d8e1a7503bb91b16de072ae} 
+int get\+Maximum (\begin{DoxyParamCaption}\item[{int}]{arr}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{capacity}{}\end{DoxyParamCaption})}
+
+
+
+Accepts an array and its capacity, then returns the element with the highest value in the array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & the integer array to print \\
+\hline
+{\em capacity} & the element limit of the array\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Maximum value found in the array
+\end{DoxyReturn}
+Accepts an array and its capacity, then returns the element with the highest value in the array.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & the integer array acquire the maximum element from \\
+\hline
+{\em capacity} & the element limit of the array\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer value with the maximum element of the array 
+\end{DoxyReturn}
+\Hypertarget{array__statistics_8h_a63b87f0f15f9ffe55d187bea17d7696c}\index{array\_statistics.h@{array\_statistics.h}!getMedian@{getMedian}}
+\index{getMedian@{getMedian}!array\_statistics.h@{array\_statistics.h}}
+\doxysubsubsection{\texorpdfstring{getMedian()}{getMedian()}}
+{\footnotesize\ttfamily \label{array__statistics_8h_a63b87f0f15f9ffe55d187bea17d7696c} 
+double get\+Median (\begin{DoxyParamCaption}\item[{int}]{arr}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{capacity}{}\end{DoxyParamCaption})}
+
+
+
+Accepts an array and its capacity as parameters, calculates the median of the elements in the array, then returns the middle element if it is odd or the average of the middle elements if it is even. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & the integer array to calculate the average of \\
+\hline
+{\em capacity} & the element limit of the array\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double value with median 
+\end{DoxyReturn}
+\Hypertarget{array__statistics_8h_afc85a4c15ca09d11bba5c74f0c5d1f01}\index{array\_statistics.h@{array\_statistics.h}!getMinimum@{getMinimum}}
+\index{getMinimum@{getMinimum}!array\_statistics.h@{array\_statistics.h}}
+\doxysubsubsection{\texorpdfstring{getMinimum()}{getMinimum()}}
+{\footnotesize\ttfamily \label{array__statistics_8h_afc85a4c15ca09d11bba5c74f0c5d1f01} 
+int get\+Minimum (\begin{DoxyParamCaption}\item[{int}]{arr}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{capacity}{}\end{DoxyParamCaption})}
+
+
+
+Accepts an array and its capacity, then returns the element with the lowest value in the array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & the integer array to print \\
+\hline
+{\em capacity} & the element limit of the array\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Minimum value found in the array
+\end{DoxyReturn}
+Accepts an array and its capacity, then returns the element with the lowest value in the array.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & the integer array to acquire the minimum element from \\
+\hline
+{\em capacity} & the element limit of the array\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+integer value with the minimum element of the array 
+\end{DoxyReturn}
+\Hypertarget{array__statistics_8h_a762a4df340d008ff7a9aaa83f1f3aa4c}\index{array\_statistics.h@{array\_statistics.h}!getStandardDeviation@{getStandardDeviation}}
+\index{getStandardDeviation@{getStandardDeviation}!array\_statistics.h@{array\_statistics.h}}
+\doxysubsubsection{\texorpdfstring{getStandardDeviation()}{getStandardDeviation()}}
+{\footnotesize\ttfamily \label{array__statistics_8h_a762a4df340d008ff7a9aaa83f1f3aa4c} 
+double get\+Standard\+Deviation (\begin{DoxyParamCaption}\item[{int}]{arr}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{capacity}{}\end{DoxyParamCaption})}
+
+
+
+Calculate and return the standard deviation of used elements in an array. 
+
+Standard deviation is calculated as\+: √(Σ(ni -\/ avg)\texorpdfstring{$^\wedge$}{\string^}2 / N) where avg is the average value and N is the number of used elements
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & the integer array to analyse \\
+\hline
+{\em capacity} & the element limit of the array\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double the standard deviation of used elements, or 0.\+0 if no elements used 
+\end{DoxyReturn}
+\Hypertarget{array__statistics_8h_a1044c3874ce342def032e271dfdc60d1}\index{array\_statistics.h@{array\_statistics.h}!getVariance@{getVariance}}
+\index{getVariance@{getVariance}!array\_statistics.h@{array\_statistics.h}}
+\doxysubsubsection{\texorpdfstring{getVariance()}{getVariance()}}
+{\footnotesize\ttfamily \label{array__statistics_8h_a1044c3874ce342def032e271dfdc60d1} 
+double get\+Variance (\begin{DoxyParamCaption}\item[{int}]{arr}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{capacity}{}\end{DoxyParamCaption})}
+
+
+
+Compute and return the variance of an array of integers. 
+
+Variance v of \{n1, n2, n3, ..., nN\} is calculated as\+: v = Σ(ni -\/ avg\}\texorpdfstring{$^\wedge$}{\string^}2 / N where avg is the average value and N is the number of used elements
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & the integer array to compute variance for \\
+\hline
+{\em capacity} & the element limit of the array\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+the variance as a double, or 0.\+0 if no used elements exist 
+\end{DoxyReturn}

@@ -1,0 +1,82 @@
+\doxysection{C\+:/\+Users/dylan/source/repos/\+CE4703\+\_\+\+Assignment1/\+CE4703\+\_\+\+Assignment1/arrayio.h File Reference}
+\hypertarget{arrayio_8h}{}\label{arrayio_8h}\index{C:/Users/dylan/source/repos/CE4703\_Assignment1/CE4703\_Assignment1/arrayio.h@{C:/Users/dylan/source/repos/CE4703\_Assignment1/CE4703\_Assignment1/arrayio.h}}
+
+
+Array input output functions for filling an array.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{arrayio_8h_a6bd8d077c77c54936aa6f32303e54f88}{fill\+From\+Keyboard}} (int arr\mbox{[}$\,$\mbox{]}, int capacity)
+\begin{DoxyCompactList}\small\item\em Fills an array with values from the keyboard inputs. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{arrayio_8h_a323f3d025255f512a00aac60c064aa6a}{print\+Used}} (int arr\mbox{[}$\,$\mbox{]}, int capacity)
+\begin{DoxyCompactList}\small\item\em Accepts an array and its capacity, then iterates through the elements, printing only used elements. \end{DoxyCompactList}\item 
+\Hypertarget{arrayio_8h_add7d509414ccec17b690b9e93229eef8}\label{arrayio_8h_add7d509414ccec17b690b9e93229eef8} 
+void {\bfseries print\+All} (int arr\mbox{[}$\,$\mbox{]}, int capacity)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Array input output functions for filling an array. 
+
+\begin{DoxyAuthor}{Author}
+Dylan O\textquotesingle{}Halloran 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+13/10/2025 
+\end{DoxyDate}
+
+
+\label{doc-func-members}
+\Hypertarget{arrayio_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{arrayio_8h_a6bd8d077c77c54936aa6f32303e54f88}\index{arrayio.h@{arrayio.h}!fillFromKeyboard@{fillFromKeyboard}}
+\index{fillFromKeyboard@{fillFromKeyboard}!arrayio.h@{arrayio.h}}
+\doxysubsubsection{\texorpdfstring{fillFromKeyboard()}{fillFromKeyboard()}}
+{\footnotesize\ttfamily \label{arrayio_8h_a6bd8d077c77c54936aa6f32303e54f88} 
+void fill\+From\+Keyboard (\begin{DoxyParamCaption}\item[{int}]{arr}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{capacity}{}\end{DoxyParamCaption})}
+
+
+
+Fills an array with values from the keyboard inputs. 
+
+Reads integer values from input and stores them in the array Input terminates when negative value or array capacity are encountered All remaining elements are marked as unused, if applicable (-\/1)
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & The integer array to fill \\
+\hline
+{\em capacity} & The maximum number of elements the array can hold\\
+\hline
+\end{DoxyParams}
+Fills an array with values from the keyboard inputs.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & the integer array to fill \\
+\hline
+{\em capacity} & the element limit of the array \\
+\hline
+\end{DoxyParams}
+\Hypertarget{arrayio_8h_a323f3d025255f512a00aac60c064aa6a}\index{arrayio.h@{arrayio.h}!printUsed@{printUsed}}
+\index{printUsed@{printUsed}!arrayio.h@{arrayio.h}}
+\doxysubsubsection{\texorpdfstring{printUsed()}{printUsed()}}
+{\footnotesize\ttfamily \label{arrayio_8h_a323f3d025255f512a00aac60c064aa6a} 
+void print\+Used (\begin{DoxyParamCaption}\item[{int}]{arr}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{capacity}{}\end{DoxyParamCaption})}
+
+
+
+Accepts an array and its capacity, then iterates through the elements, printing only used elements. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & the integer array to print \\
+\hline
+{\em capacity} & the element limit of the array\\
+\hline
+{\em arr} & the integer array to fill \\
+\hline
+{\em capacity} & the element limit of the array \\
+\hline
+\end{DoxyParams}

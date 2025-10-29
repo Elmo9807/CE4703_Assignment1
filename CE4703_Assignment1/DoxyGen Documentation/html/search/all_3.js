@@ -1,0 +1,10 @@
+var searchData=
+[
+  ['generaterandomnumber_0',['generateRandomNumber',['../utility_8c.html#a823d5e579f5743b298236a2a56355f12',1,'generateRandomNumber(int lowerLimit, int upperLimit):&#160;utility.c'],['../utility_8h.html#a823d5e579f5743b298236a2a56355f12',1,'generateRandomNumber(int lowerLimit, int upperLimit):&#160;utility.c']]],
+  ['getaverage_1',['getAverage',['../array__statistics_8c.html#a29b86644b114d35baca16daacea7f4d1',1,'getAverage(int arr[], int capacity):&#160;array_statistics.c'],['../array__statistics_8h.html#a29b86644b114d35baca16daacea7f4d1',1,'getAverage(int arr[], int capacity):&#160;array_statistics.c']]],
+  ['getmaximum_2',['getMaximum',['../array__statistics_8c.html#ae4a13df92d8e1a7503bb91b16de072ae',1,'getMaximum(int arr[], int capacity):&#160;array_statistics.c'],['../array__statistics_8h.html#ae4a13df92d8e1a7503bb91b16de072ae',1,'getMaximum(int arr[], int capacity):&#160;array_statistics.c']]],
+  ['getmedian_3',['getMedian',['../array__statistics_8c.html#a63b87f0f15f9ffe55d187bea17d7696c',1,'getMedian(int arr[], int capacity):&#160;array_statistics.c'],['../array__statistics_8h.html#a63b87f0f15f9ffe55d187bea17d7696c',1,'getMedian(int arr[], int capacity):&#160;array_statistics.c']]],
+  ['getminimum_4',['getMinimum',['../array__statistics_8c.html#afc85a4c15ca09d11bba5c74f0c5d1f01',1,'getMinimum(int arr[], int capacity):&#160;array_statistics.c'],['../array__statistics_8h.html#afc85a4c15ca09d11bba5c74f0c5d1f01',1,'getMinimum(int arr[], int capacity):&#160;array_statistics.c']]],
+  ['getstandarddeviation_5',['getStandardDeviation',['../array__statistics_8c.html#a762a4df340d008ff7a9aaa83f1f3aa4c',1,'getStandardDeviation(int arr[], int capacity):&#160;array_statistics.c'],['../array__statistics_8h.html#a762a4df340d008ff7a9aaa83f1f3aa4c',1,'getStandardDeviation(int arr[], int capacity):&#160;array_statistics.c']]],
+  ['getvariance_6',['getVariance',['../array__statistics_8c.html#a1044c3874ce342def032e271dfdc60d1',1,'getVariance(int arr[], int capacity):&#160;array_statistics.c'],['../array__statistics_8h.html#a1044c3874ce342def032e271dfdc60d1',1,'getVariance(int arr[], int capacity):&#160;array_statistics.c']]]
+];

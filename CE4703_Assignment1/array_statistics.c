@@ -61,6 +61,13 @@ int getMinimum(int arr[], int capacity)
 {
 	/* 1. Initialise minimum value to first array element
     1.1 Set minimum = arr[0] */
+
+	// error handling to check if element at arr[0] is unused, if so, return UNUSED MARKER
+	if (arr[0] == UNUSED_MARKER) {
+		fprintf(stderr, "Error, cannot find minimum of empty array\n");
+		return UNUSED_MARKER;
+	}
+
 	int min = arr[0];
 
 	/* 2. Iterate through array comparing each used element with current minimum
@@ -98,6 +105,12 @@ int getMaximum(int arr[], int capacity)
 {
 	/* 1. Initialise maximum value to first array element
     1.1 Set maximum = arr[0] */
+
+	if (arr[0] == UNUSED_MARKER) {
+		fprintf(stderr, "Error, cannot find maximum of empty array\n");
+		return UNUSED_MARKER;
+	}
+
 	int max = arr[0];
 
 	/* 2. Iterate through array comparing each used element with current maximum

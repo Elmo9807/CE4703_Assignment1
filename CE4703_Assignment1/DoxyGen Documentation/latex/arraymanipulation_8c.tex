@@ -1,0 +1,116 @@
+\doxysection{C\+:/\+Users/dylan/source/repos/\+CE4703\+\_\+\+Assignment1/\+CE4703\+\_\+\+Assignment1/arraymanipulation.c File Reference}
+\hypertarget{arraymanipulation_8c}{}\label{arraymanipulation_8c}\index{C:/Users/dylan/source/repos/CE4703\_Assignment1/CE4703\_Assignment1/arraymanipulation.c@{C:/Users/dylan/source/repos/CE4703\_Assignment1/CE4703\_Assignment1/arraymanipulation.c}}
+
+
+Implementation of array manipulation functions.  
+
+
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include "{}config.\+h"{}}\newline
+{\ttfamily \#include "{}arraymanipulation.\+h"{}}\newline
+{\ttfamily \#include "{}utility.\+h"{}}\newline
+{\ttfamily \#include "{}array\+\_\+statistics.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{arraymanipulation_8c_af70325a61b5d3d34d9c4d27c59ac495e}{fill\+Array\+Random}} (int arr\mbox{[}$\,$\mbox{]}, int size, int capacity, int min, int max)
+\begin{DoxyCompactList}\small\item\em Accepts parameters to fill an array using either a combination of random numbers in range and UNUSED\+\_\+\+MARKER or exclusively one of those values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{arraymanipulation_8c_a388661acd3fa42258745b21c858fd7a8}{clear\+Array}} (int arr\mbox{[}$\,$\mbox{]}, int capacity)
+\begin{DoxyCompactList}\small\item\em Accepts an array and the array capacity, then "{}clears"{} all index values by assigning them the UNUSED\+\_\+\+MARKER. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{arraymanipulation_8c_af14c7bfea2b4a616f3d94fc281338553}{sort\+Array}} (int arr\mbox{[}$\,$\mbox{]}, int capacity)
+\begin{DoxyCompactList}\small\item\em Accepts an array and the array capacity, differentiates between unused and used indices, then sorts the used indices in ascending order and the unused are sorted to the end of the array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{arraymanipulation_8c_a5add93171a1d436776db24cb94917f81}{randomise\+Array}} (int arr\mbox{[}$\,$\mbox{]}, int capacity)
+\begin{DoxyCompactList}\small\item\em Accepts an array and the array capacity, differentiates between unused and used indices, then applies Fisher-\/\+Yates shuffling algorithm to randomise the element positions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of array manipulation functions. 
+
+\begin{DoxyAuthor}{Author}
+Dylan O\textquotesingle{}Halloran 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+16/10/2025 
+\end{DoxyDate}
+
+
+\label{doc-func-members}
+\Hypertarget{arraymanipulation_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{arraymanipulation_8c_a388661acd3fa42258745b21c858fd7a8}\index{arraymanipulation.c@{arraymanipulation.c}!clearArray@{clearArray}}
+\index{clearArray@{clearArray}!arraymanipulation.c@{arraymanipulation.c}}
+\doxysubsubsection{\texorpdfstring{clearArray()}{clearArray()}}
+{\footnotesize\ttfamily \label{arraymanipulation_8c_a388661acd3fa42258745b21c858fd7a8} 
+void clear\+Array (\begin{DoxyParamCaption}\item[{int}]{arr}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{capacity}{}\end{DoxyParamCaption})}
+
+
+
+Accepts an array and the array capacity, then "{}clears"{} all index values by assigning them the UNUSED\+\_\+\+MARKER. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & the integer array to clear \\
+\hline
+{\em capacity} & the element limit of the array \\
+\hline
+\end{DoxyParams}
+\Hypertarget{arraymanipulation_8c_af70325a61b5d3d34d9c4d27c59ac495e}\index{arraymanipulation.c@{arraymanipulation.c}!fillArrayRandom@{fillArrayRandom}}
+\index{fillArrayRandom@{fillArrayRandom}!arraymanipulation.c@{arraymanipulation.c}}
+\doxysubsubsection{\texorpdfstring{fillArrayRandom()}{fillArrayRandom()}}
+{\footnotesize\ttfamily \label{arraymanipulation_8c_af70325a61b5d3d34d9c4d27c59ac495e} 
+void fill\+Array\+Random (\begin{DoxyParamCaption}\item[{int}]{arr}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{size}{, }\item[{int}]{capacity}{, }\item[{int}]{min}{, }\item[{int}]{max}{}\end{DoxyParamCaption})}
+
+
+
+Accepts parameters to fill an array using either a combination of random numbers in range and UNUSED\+\_\+\+MARKER or exclusively one of those values. 
+
+Fill array to size with random integers using generate\+Random\+Number.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & the integer array to fill \\
+\hline
+{\em capacity} & the element limit of the array \\
+\hline
+{\em size} & the amount of random numbers to add to the array \\
+\hline
+{\em min} & the minimum value that can be randomly generated inclusive \\
+\hline
+{\em max} & the maximum value that can be randomly generated inclusive \\
+\hline
+\end{DoxyParams}
+\Hypertarget{arraymanipulation_8c_a5add93171a1d436776db24cb94917f81}\index{arraymanipulation.c@{arraymanipulation.c}!randomiseArray@{randomiseArray}}
+\index{randomiseArray@{randomiseArray}!arraymanipulation.c@{arraymanipulation.c}}
+\doxysubsubsection{\texorpdfstring{randomiseArray()}{randomiseArray()}}
+{\footnotesize\ttfamily \label{arraymanipulation_8c_a5add93171a1d436776db24cb94917f81} 
+void randomise\+Array (\begin{DoxyParamCaption}\item[{int}]{arr}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{capacity}{}\end{DoxyParamCaption})}
+
+
+
+Accepts an array and the array capacity, differentiates between unused and used indices, then applies Fisher-\/\+Yates shuffling algorithm to randomise the element positions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & the integer array to sort \\
+\hline
+{\em capacity} & the element limit of the array \\
+\hline
+\end{DoxyParams}
+\Hypertarget{arraymanipulation_8c_af14c7bfea2b4a616f3d94fc281338553}\index{arraymanipulation.c@{arraymanipulation.c}!sortArray@{sortArray}}
+\index{sortArray@{sortArray}!arraymanipulation.c@{arraymanipulation.c}}
+\doxysubsubsection{\texorpdfstring{sortArray()}{sortArray()}}
+{\footnotesize\ttfamily \label{arraymanipulation_8c_af14c7bfea2b4a616f3d94fc281338553} 
+void sort\+Array (\begin{DoxyParamCaption}\item[{int}]{arr}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{capacity}{}\end{DoxyParamCaption})}
+
+
+
+Accepts an array and the array capacity, differentiates between unused and used indices, then sorts the used indices in ascending order and the unused are sorted to the end of the array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & the integer array to sort \\
+\hline
+{\em capacity} & the element limit of the array \\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,123 @@
+\doxysection{C\+:/\+Users/dylan/source/repos/\+CE4703\+\_\+\+Assignment1/\+CE4703\+\_\+\+Assignment1/arraymanipulation.h File Reference}
+\hypertarget{arraymanipulation_8h}{}\label{arraymanipulation_8h}\index{C:/Users/dylan/source/repos/CE4703\_Assignment1/CE4703\_Assignment1/arraymanipulation.h@{C:/Users/dylan/source/repos/CE4703\_Assignment1/CE4703\_Assignment1/arraymanipulation.h}}
+
+
+Array manipulation function header file.  
+
+
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{arraymanipulation_8h_af70325a61b5d3d34d9c4d27c59ac495e}{fill\+Array\+Random}} (int arr\mbox{[}$\,$\mbox{]}, int size, int capacity, int min, int max)
+\begin{DoxyCompactList}\small\item\em Fill array to size with random integers using generate\+Random\+Number. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{arraymanipulation_8h_a388661acd3fa42258745b21c858fd7a8}{clear\+Array}} (int arr\mbox{[}$\,$\mbox{]}, int capacity)
+\begin{DoxyCompactList}\small\item\em Accepts an array and the array capacity, then "{}clears"{} all index values by assigning them the UNUSED\+\_\+\+MARKER. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{arraymanipulation_8h_af14c7bfea2b4a616f3d94fc281338553}{sort\+Array}} (int arr\mbox{[}$\,$\mbox{]}, int capacity)
+\begin{DoxyCompactList}\small\item\em Accepts an array and the array capacity, differentiates between unused and used indices, then sorts the used indices in ascending order and the unused are sorted to the end of the array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{arraymanipulation_8h_a5add93171a1d436776db24cb94917f81}{randomise\+Array}} (int arr\mbox{[}$\,$\mbox{]}, int capacity)
+\begin{DoxyCompactList}\small\item\em Accepts an array and the array capacity, differentiates between unused and used indices, then applies Fisher-\/\+Yates shuffling algorithm to randomise the element positions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Array manipulation function header file. 
+
+\begin{DoxyAuthor}{Author}
+Dylan OHalloran 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+16/10/2025 
+\end{DoxyDate}
+
+
+\label{doc-func-members}
+\Hypertarget{arraymanipulation_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{arraymanipulation_8h_a388661acd3fa42258745b21c858fd7a8}\index{arraymanipulation.h@{arraymanipulation.h}!clearArray@{clearArray}}
+\index{clearArray@{clearArray}!arraymanipulation.h@{arraymanipulation.h}}
+\doxysubsubsection{\texorpdfstring{clearArray()}{clearArray()}}
+{\footnotesize\ttfamily \label{arraymanipulation_8h_a388661acd3fa42258745b21c858fd7a8} 
+void clear\+Array (\begin{DoxyParamCaption}\item[{int}]{arr}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{capacity}{}\end{DoxyParamCaption})}
+
+
+
+Accepts an array and the array capacity, then "{}clears"{} all index values by assigning them the UNUSED\+\_\+\+MARKER. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & the integer array to clear \\
+\hline
+{\em capacity} & the element limit of the array \\
+\hline
+\end{DoxyParams}
+\Hypertarget{arraymanipulation_8h_af70325a61b5d3d34d9c4d27c59ac495e}\index{arraymanipulation.h@{arraymanipulation.h}!fillArrayRandom@{fillArrayRandom}}
+\index{fillArrayRandom@{fillArrayRandom}!arraymanipulation.h@{arraymanipulation.h}}
+\doxysubsubsection{\texorpdfstring{fillArrayRandom()}{fillArrayRandom()}}
+{\footnotesize\ttfamily \label{arraymanipulation_8h_af70325a61b5d3d34d9c4d27c59ac495e} 
+void fill\+Array\+Random (\begin{DoxyParamCaption}\item[{int}]{arr}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{size}{, }\item[{int}]{capacity}{, }\item[{int}]{min}{, }\item[{int}]{max}{}\end{DoxyParamCaption})}
+
+
+
+Fill array to size with random integers using generate\+Random\+Number. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & array of integers to be filled \\
+\hline
+{\em size} & amount of random numbers to be added to the array \\
+\hline
+{\em capacity} & element max of the array \\
+\hline
+{\em min} & Minimum value in random range (inclusive) \\
+\hline
+{\em max} & Maximum value in random range (inclusive)\\
+\hline
+\end{DoxyParams}
+Fill array to size with random integers using generate\+Random\+Number.
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & the integer array to fill \\
+\hline
+{\em capacity} & the element limit of the array \\
+\hline
+{\em size} & the amount of random numbers to add to the array \\
+\hline
+{\em min} & the minimum value that can be randomly generated inclusive \\
+\hline
+{\em max} & the maximum value that can be randomly generated inclusive \\
+\hline
+\end{DoxyParams}
+\Hypertarget{arraymanipulation_8h_a5add93171a1d436776db24cb94917f81}\index{arraymanipulation.h@{arraymanipulation.h}!randomiseArray@{randomiseArray}}
+\index{randomiseArray@{randomiseArray}!arraymanipulation.h@{arraymanipulation.h}}
+\doxysubsubsection{\texorpdfstring{randomiseArray()}{randomiseArray()}}
+{\footnotesize\ttfamily \label{arraymanipulation_8h_a5add93171a1d436776db24cb94917f81} 
+void randomise\+Array (\begin{DoxyParamCaption}\item[{int}]{arr}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{capacity}{}\end{DoxyParamCaption})}
+
+
+
+Accepts an array and the array capacity, differentiates between unused and used indices, then applies Fisher-\/\+Yates shuffling algorithm to randomise the element positions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & the integer array to sort \\
+\hline
+{\em capacity} & the element limit of the array \\
+\hline
+\end{DoxyParams}
+\Hypertarget{arraymanipulation_8h_af14c7bfea2b4a616f3d94fc281338553}\index{arraymanipulation.h@{arraymanipulation.h}!sortArray@{sortArray}}
+\index{sortArray@{sortArray}!arraymanipulation.h@{arraymanipulation.h}}
+\doxysubsubsection{\texorpdfstring{sortArray()}{sortArray()}}
+{\footnotesize\ttfamily \label{arraymanipulation_8h_af14c7bfea2b4a616f3d94fc281338553} 
+void sort\+Array (\begin{DoxyParamCaption}\item[{int}]{arr}{\mbox{[}$\,$\mbox{]}, }\item[{int}]{capacity}{}\end{DoxyParamCaption})}
+
+
+
+Accepts an array and the array capacity, differentiates between unused and used indices, then sorts the used indices in ascending order and the unused are sorted to the end of the array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arr} & the integer array to sort \\
+\hline
+{\em capacity} & the element limit of the array \\
+\hline
+\end{DoxyParams}
