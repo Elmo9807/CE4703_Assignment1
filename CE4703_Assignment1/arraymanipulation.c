@@ -10,6 +10,7 @@
 #include "config.h"
 #include "arraymanipulation.h"
 #include "utility.h"
+#include "array_statistics.h"
 
 /**
 * @brief Accepts parameters to fill an array using either a combination of random numbers in range and UNUSED_MARKER or exclusively one of those values
@@ -51,10 +52,6 @@ void fillArrayRandom(int arr[], int size, int capacity, int min, int max)
 		/* Iterate through the remaining elements of the array, assigning UNUSED_MARKER to every available position */
 		arr[i] = UNUSED_MARKER; 
 	}
-
-	for (int j = 0; j < capacity; j++) {
-		printf("Value at index %d is %d\n", j, arr[j]);
-	}
 }
 
 /**
@@ -89,31 +86,18 @@ void clearArray(int arr[], int capacity)
 /* 1. Receive array and capacity as parameters */
 void sortArray(int arr[], int capacity) 
 {
-	/* 1.1 Initialise used as data type int, track used indices in array */
-	int used = 0;
-	
-	/* 2. Iterate through each index from 0 to capacity - 1 */
+	/* 1.1 Count used elements using countUsedElements function*/
+	/* 1.2 Store result in used variable */
+	int used = countUsedElements(arr, capacity);
 
-	/* 2.1 Initialise for loop from index 0, run to capacity - 1, step of 1 */
-	for (int i = 0; i < capacity; i++) {
-
-		/* 2.2 At each index, compare element with UNUSED_MARKER, if the element is unused, break, else move to 2.3 */
-		if (arr[i] == UNUSED_MARKER) break;
-
-		/* 2.3 Increment used value by 1 */
-		used++;
-	}
-
-	/* 3. Iterate through each index again from iterator i = 0 to used - 1 */
+	/* 2. Sort used elements in ascending order using bubble sort
+		2.1 Iterate through each index from iterator i = 0 to used - 1
+		2.2 Iterate through each index from iterator j = 0 to used - i - 1, step of 1
+		2.3 Compare arr[j] with arr[j+1], if arr[j] > arr[j+1] move to step 2.4, else continue
+		2.4 Set temporary storage variable = arr[j], arr[j] = arr[j+1] and then arr[j+1] = temp */
 	for (int i = 0; i < used - 1; i++) {
-
-		/* 3.1 Iterate through each index from iterator j = 0 to used - i - 1, step of 1 */
 		for (int j = 0; j < used - i - 1; j++) {
-
-			/* 3.2 Compare arr[j] with arr[j + 1], if arr[j] > arr[j + 1] move to step 3.3, else continue */
 			if (arr[j] > arr[j + 1]) {
-
-				/* 3.3 Set temporary storage variable = arr[j], arr[j] = arr[j + 1] and then arr[j + 1] = temp */
 				int temp = arr[j];
 				arr[j] = arr[j + 1];
 				arr[j + 1] = temp;
@@ -133,35 +117,21 @@ void sortArray(int arr[], int capacity)
 /* 1. Receive array and capacity as parameters */
 void randomiseArray(int arr[], int capacity) 
 {
-	/* 1.1 Initialise used as type int and set to 0 */
-	int used = 0;
+	/* 2. Count used elements using countUsedElements() function */
+	/* 2.2 Store result in used variable */
+	int used = countUsedElements(arr, capacity);
 
-	/* 2. Iterate through each index from 0 to capacity - 1 */
+	/* 3. Randomise used elements using Fisher-Yates shuffling algorithm
+		3.1 Iterate for j from used - 1 down to 1 with step -1
+		3.1.1 Generate randomIndex = randomNumberGenerator(0, j)
+			3.1.2 Swap arr[j] with arr[randomIndex]
+				- temp = arr[j]
+				- arr[j] = arr[randomIndex]
+				- arr[randomIndex] = temp */
 
-	/* 2.1 Initialise for loop from index 0, run to capacity - 1, step of 1 */
-	for (int i = 0; i < capacity; i++) {
-
-		/* 2.2 At each index, compare element with UNUSED_MARKER, if element is unused, break, else move to 2.3 */
-		if (arr[i] == UNUSED_MARKER) {
-			break;
-		}
-
-		/* 2.3 Increment used value by 1 */
-		used++;
-	}
-
-	/* 3. Iterate through each index again from used - 1 to 1, using Fisher-Yates shuffling algorithm */
-
-	/*  3.1 Iterate for j from used - 1 down to 1 with step -1 */
 	for (int j = used - 1; j > 0; j--) {
 
-		/* 3.1.1 Generate randomIndex = randomNumberGenerator(0, j), this preserves code reusability by employing our randomisation function */
 		int randomIndex = generateRandomNumber(0, j);
-
-		/* 3.1.2 Swap arr[j] with arr[randomIndex]
-            - temp = arr[j] to preserve our original value
-            - arr[j] = arr[randomIndex]
-            - arr[randomIndex] = temp */
 
 		int temp = arr[j];
 		arr[j] = arr[randomIndex];

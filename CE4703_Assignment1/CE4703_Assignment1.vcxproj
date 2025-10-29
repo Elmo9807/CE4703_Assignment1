@@ -130,6 +130,7 @@
     <ClInclude Include="arraymanipulation.h" />
     <ClInclude Include="array_statistics.h" />
     <ClInclude Include="config.h" />
+    <ClInclude Include="menu.h" />
     <ClInclude Include="utility.h" />
   </ItemGroup>
   <ItemGroup>
@@ -137,6 +138,7 @@
     <ClCompile Include="arraymanipulation.c" />
     <ClCompile Include="array_statistics.c" />
     <ClCompile Include="main.c" />
+    <ClCompile Include="MenuFunction1.c" />
     <ClCompile Include="utility.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -5,6 +5,8 @@
 * @date 10/10/2025
 */
 
+#define _CRT_SECURE_NO_WARNINGS
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
@@ -20,12 +22,12 @@
 
 void fillFromKeyboard(int arr[], int capacity)
 {
-	int i = 0;
 	int input;
+	int i;
 
-	for (i; i < capacity; i++) {
+	for (i = 0; i < capacity; i++) {
 		printf("Please enter your number: \n");
-		scanf_s("%d", &input);
+		(void)scanf("%d", &input);
 
 		if (input < 0) {
 			break;
@@ -37,10 +39,6 @@ void fillFromKeyboard(int arr[], int capacity)
 	for (int j = i; j < capacity; j++) {
 		arr[j] = UNUSED_MARKER;
 
-	}
-
-	for (int z = 0; z < capacity; z++) {
-		printf("Value at index %d is %d\n", z, arr[z]);
 	}
 }
 
@@ -69,22 +67,25 @@ void printUsed(int arr[], int capacity)
 	for (int i = 0; i < capacity; i++) {
 
 		/* 3.3 For each element :
-	    3.3.1 If element equals UNUSED_MARKER, break from loop
-		3.3.2 If not first element, print comma and space
-		3.3.3 Print the element value
-		3.3.4 Set flag 'first' to 0 */
+	    3.3.1 If element equals UNUSED_MARKER, break from loop */
 		if (arr[i] == UNUSED_MARKER)
 			break;
 
-		if (!first)
+		/* 3.3.2 If not first element, print comma and space */
+		if (!first) {
 			printf(", ");
-			printf("%d", arr[i]);
-			first = 0;
+		}
+
+		/* 3.3.3 Print the element value */
+		printf("%d", arr[i]);
+
+		/* 3.3.4 Set flag 'first' to 0 */
+		first = 0;
 	}
 
 	/* 4. Print closing brace
-	4.1 Output character '}'
-	4.2 Output newline character */
+		4.1 Output character '}'
+		4.2 Output newline character */
 	printf("}\n");
 }
 
@@ -101,18 +102,23 @@ void printAll(int arr[], int capacity)
 
 	/* 3.2 Iterate for i from index 0 to capacity - 1, with a step of 1 */
 	for (int i = 0; i < capacity; i++) {
-		/* 3.3 For each element
-        3.3.1 If not first element, print comma and space
-        3.3.2 Print element value
-        3.3.3 Set flag 'first' to 0 */
-		if (!first)
+
+		/* 3.3 For each element */
+
+		/* 3.3.1 If not first element, print comma and space */
+		if (!first) {
 			printf(", ");
-			printf("%d");
-			first = 0;
+		}
+
+		/* 3.3.2 Print the element value */
+		printf("%d", arr[i]);
+
+		/* 3.3.3 Set flag 'first' to 0 */
+		first = 0;
 	}
 
 	/* 4. Print closing brace
-    4.1 Output character '}'
-    4.2 Output newline character */
+		4.1 Output character '}'
+		4.2 Output newline character */
 	printf("}\n");
 }
