@@ -13,7 +13,18 @@
 #include "array_statistics.h"
 
 /**
-* @brief Menu Function 1 - Demonstrates array creation, filling, clearing, sorting and min/max operations
+* @brief Menu Function 1 - Demonstrates basic array operations
+*
+* Creates an array of capacity 10 and performs the following sequence:
+* - Fills with 7 random numbers (range 10-20)
+* - Prints used and all elements
+* - Clears the array
+* - Prints array state after clearing
+* - Fills with 5 random numbers (range 20-30)
+* - Sorts the array in ascending order
+* - Displays minimum and maximum values
+*
+* All output is printed to stdout with descriptive labels.
 */
 
 void menuFunction1(void) 

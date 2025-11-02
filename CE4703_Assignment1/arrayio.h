@@ -32,7 +32,7 @@ void fillFromKeyboard(int arr[], int capacity);
 
 void printUsed(int arr[], int capacity);
 
-/*
+/**
 * @brief Accepts an array and its capacity, then iterates through the elements, printing all elements
 *
 * @param arr the integer array to print

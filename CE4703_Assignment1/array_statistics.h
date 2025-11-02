@@ -1,12 +1,12 @@
-﻿#ifndef ARRAY_STATISTICS_H
-#define ARRAY_STATISTICS_H
-
-/**
+﻿/**
 * @file array_statistics.h
 * @brief Function grouping that outputs statistical analysis of the array elements
 * @author Dylan OHalloran
 * @date 22/10/2025
 */
+
+#ifndef ARRAY_STATISTICS_H
+#define ARRAY_STATISTICS_H
 
 /**
  * @brief Count and return the number of used elements in an array

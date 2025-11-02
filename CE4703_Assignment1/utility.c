@@ -25,7 +25,7 @@ int generateRandomNumber(int lowerLimit, int upperLimit) {
 	* 3. Generate and return random number
 	*/
 
-	/* Step 1: Initialise RNG if not already seeded */
+	/* Step 1: Initialise RNG if not already seeded, mark seeded as static to preserve value between function calls */
 	static int seeded = 0;
 	if (!seeded) {
 		srand((unsigned int)time(NULL));

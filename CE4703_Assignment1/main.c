@@ -14,6 +14,16 @@
 #include "menu.h"
 #include "arraymanipulation.h"
 
+/**
+* @brief Main program entry point that provides menu interface
+* 
+* @param argc Number of command line arguments
+* @param argv Array of command line arguments
+* 
+* @return EXIT_SUCCESS on successful completion
+* 
+*/
+
 int main(int argc, char *argv[]) {
 	printf("CE4703 Assignment 1 - Array Analysis Program\n");
 	printf("=====================================\n");

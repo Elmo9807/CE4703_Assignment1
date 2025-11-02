@@ -1,12 +1,12 @@
-#ifndef MENU_H
-#define MENU_H
-
 /**
 * @file menu.h
 * @brief Menu functions that demonstrate array operations
 * @author Dylan O'Halloran
 * @date 28/10/2025
 */
+
+#ifndef MENU_H
+#define MENU_H
 
 /**
 * @brief Menu Function 1 - Demonstrates array creation, filling, clearing, sorting and min/max operations

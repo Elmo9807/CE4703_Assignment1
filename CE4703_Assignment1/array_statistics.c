@@ -62,7 +62,7 @@ int getMinimum(int arr[], int capacity)
 	/* 1. Initialise minimum value to first array element
     1.1 Set minimum = arr[0] */
 
-	// error handling to check if element at arr[0] is unused, if so, return UNUSED MARKER
+	// error handling to check if element at arr[0] is unused, if so, return UNUSED MARKER as sentinel value
 	if (arr[0] == UNUSED_MARKER) {
 		fprintf(stderr, "Error, cannot find minimum of empty array\n");
 		return UNUSED_MARKER;
@@ -106,6 +106,7 @@ int getMaximum(int arr[], int capacity)
 	/* 1. Initialise maximum value to first array element
     1.1 Set maximum = arr[0] */
 
+	// error handling, same logic as getMinimum error handling
 	if (arr[0] == UNUSED_MARKER) {
 		fprintf(stderr, "Error, cannot find maximum of empty array\n");
 		return UNUSED_MARKER;

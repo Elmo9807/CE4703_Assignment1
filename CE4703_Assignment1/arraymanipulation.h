@@ -10,6 +10,7 @@
 
 /**
 * @brief Fill array to size with random integers using generateRandomNumber
+* 
 * @param arr array of integers to be filled
 * @param size amount of random numbers to be added to the array
 * @param capacity element max of the array

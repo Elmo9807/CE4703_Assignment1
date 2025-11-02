@@ -5,7 +5,7 @@
 * @date 10/10/2025
 */
 
-// Implemented to prevent scanf overflow warnings
+/* Implemented to prevent scanf overflow warnings */
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <stdlib.h>
@@ -22,38 +22,38 @@
 
 void fillFromKeyboard(int arr[], int capacity)
 {
-	// temp variable to store user input
+	 /* temp variable to store user input */
 	int input;
 
-	// iterator value
+	/* iterator value */
 	int i;
 
-	// Quality of life addition, aid user comprehension of upper limits and stop parameters
+	/* Quality of life addition, aid user comprehension of upper limits and stop parameters */
 	printf("Enter integer values (enter negative value to stop, max %d values):\n", capacity);
 
 	for (i = 0; i < capacity; i++) {
-		// Tracking values for user QoL
+		/* Tracking values for user QoL */
 		printf("Value %d: ", i + 1);
 
 		if (scanf("%d", &input) != 1) {
-			// Clear invalid input
+			/* Clear invalid input*/
 			while (getchar() != '\n');
 			printf("Invalid input. Please enter an integer.\n");
-			// Retry input
+			/* Retry input*/
 			i--;
 			continue;
 		}
 
-		// negative check to determine cessation
+		/* negative check to determine cessation*/
 		if (input < 0) {
 			break;
 		}
 
-		// set current index to user entered value
+		/* set current index to user entered value*/
 		arr[i] = input;
 	}
 
-	// set remainder to unused
+	/* set remainder to unused*/
 	for (int j = i; j < capacity; j++) {
 		arr[j] = UNUSED_MARKER;
 
