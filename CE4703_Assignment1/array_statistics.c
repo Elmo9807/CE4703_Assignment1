@@ -286,50 +286,47 @@ double getMedian(int arr[], int capacity)
 
 double getVariance(int arr[], int capacity)
 {
-	/* 1.1 Initialise used as type int and set to return value of countUsedElements(arr, capacity) */
-	int used = countUsedElements(arr, capacity);
+	/* 1.1 Initialise used as type int */
+	int used;
 
 	/* 1.2 If no used elements exist, return 0.0 */
 	if (used == 0) {
 		return 0.0;
 	}
 
-	/* 1.3 Initialise sum for calculating average */
-	int sum = 0;
-
-	/* 1.4 Initialise varianceSum for accumulating squared differences */
+	/* 1.3 Initialise varianceSum for accumulating squared differences */
 	double varianceSum = 0.0;
 
-	/* 1.5 Initialise avg to store the average value */
+	/* 1.4 Initialise avg to store the average value */
 	double avg;
 
-	/* 2. Count the number of used elements in the array */
+	/* 2. Count used elements
+		2.1 Initialise used to countUsedElements(arr, capacity) */
+	int used = countUsedElements(arr, capacity);
+
+	/* 2.2 Check if used == 0, if true, return 0.0, else continue */
+	if (used == 0) {
+		return 0.0;
+	}
 
 	/* 3. Calculate the average of used elements */
 
-	/* 3.1 Iterate through used elements from 0 to used - 1 */
-	for (int i = 0; i < used; i++) {
-
-		/* 3.2 Add each element to sum */
-		sum += arr[i];
-	}
-
-	/* 3.3 Calculate average by dividing sum by number of used elements */
-	avg = (double)sum / used;
+	/* 3.1 Call getAverage, passing arr and capacity as parameters to calculate average */
+	avg = getAverage(arr, capacity);
 
 	/* 4. Calculate variance using the formula Σ(ni - avg)² / N */
 
 	/* 4.1 Iterate through used elements from 0 to used - 1 */
 	for (int i = 0; i < used; i++) {
 
-		/* 4.2 Calculate difference between element and average */
+		/* 4.1.1 Calculate difference between element and average */
 		double difference = arr[i] - avg;
 
-		/* 4.3 Square the difference and add to varianceSum */
+		/* 4.1.2 Square the difference and add to varianceSum */
 		varianceSum += difference * difference;
 	}
 
-	/* 4.4 Calculate final variance by dividing sum of squared differences by count */
+	/* 4.2 Calculate final variance by dividing sum of squared differences by count */
 	return varianceSum / used;
 }
 
