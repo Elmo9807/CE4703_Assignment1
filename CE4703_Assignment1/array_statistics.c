@@ -10,6 +10,7 @@
 #include <math.h>
 #include "config.h"
 #include "array_statistics.h"
+#include "arraymanipulation.h"
 
 /**
  * @brief Count and return the number of used elements in an array
@@ -62,7 +63,7 @@ int getMinimum(int arr[], int capacity)
 	/* 1. Initialise minimum value to first array element
     1.1 Set minimum = arr[0] */
 
-	// error handling to check if element at arr[0] is unused, if so, return UNUSED MARKER as sentinel value
+	/* error handling to check if element at arr[0] is unused, if so, return UNUSED MARKER as sentinel value */
 	if (arr[0] == UNUSED_MARKER) {
 		fprintf(stderr, "Error, cannot find minimum of empty array\n");
 		return UNUSED_MARKER;
@@ -106,7 +107,7 @@ int getMaximum(int arr[], int capacity)
 	/* 1. Initialise maximum value to first array element
     1.1 Set maximum = arr[0] */
 
-	// error handling, same logic as getMinimum error handling
+	/* error handling, same logic as getMinimum error handling */
 	if (arr[0] == UNUSED_MARKER) {
 		fprintf(stderr, "Error, cannot find maximum of empty array\n");
 		return UNUSED_MARKER;
@@ -201,7 +202,7 @@ double getMedian(int arr[], int capacity)
 		1.1 Initialise used = countUsedElements(arr, capacity) */
 	int used = countUsedElements(arr, capacity);
 
-	// error handling in case of empty array
+	/* error handling in case of empty array */
 	if (used == 0) {
 		return 0.0;
 	}
@@ -211,13 +212,13 @@ double getMedian(int arr[], int capacity)
 		2.2 Check if allocation succeeded (tempArr != NULL)
         2.2.1 If tempArr is NULL, return 0.0 */
 
-	// Dynamic allocation of memory for temporary array
+	/* Dynamic allocation of memory for temporary array*/
 	int* tempArr = (int*)malloc(used * sizeof(int));
 
-	// Malloc check to see if it succeeded
+	/* Malloc check to see if it succeeded */
 	if (tempArr == NULL) {
 		
-		// Handle error if malloc fails
+		/* Handle error if malloc fails */
 		return 0.0;
 	}
 
@@ -235,21 +236,11 @@ double getMedian(int arr[], int capacity)
         2.4.4 If tempArr[j] > tempArr[j+1], swap:
             2.4.4.1 temp = tempArr[j]
             2.4.4.2 tempArr[j] = tempArr[j+1]
-            2.4.4.3 tempArr[j+1] = temp */
+            2.4.4.3 tempArr[j+1] = temp 
+			This is all taken care of in sortArray, but I have restated the pseudocode for ease of reading */
 
 	if (used > 1) {
-		for (int i = 0; i < used - 1; i++) {
-			for (int j = 0; j < used - i - 1; j++) {
-				// bounds check due to Build+Intellisense analyser being unable to verify bounds
-				if (j + 1 < used) {
-					if (tempArr[j] > tempArr[j + 1]) {
-						int temp = tempArr[j];
-						tempArr[j] = tempArr[j + 1];
-						tempArr[j + 1] = temp;
-					}
-				}
-			}
-		}
+		sortArray(tempArr, used);
 	}
 
 	/*	3. Calculate the median value
